@@ -197,8 +197,10 @@ public final class JsChecker {
     Compiler compiler = new Compiler();
     CompilerOptions options = new CompilerOptions();
     options.setLanguage(language);
-    System.out.println(convention);
-    System.out.println(convention.convention);
+    System.out.printf("JsChecker 1: %s\n", convention);
+    System.out.printf("JsChecker 2: %s\n", convention.convention);
+    System.out.printf("JsChecker 3: none %s, google %s, closure %s, jquery %s\n", Convention.NONE.convention, Convention.GOOGLE.convention, Convention.CLOSURE.convention, Convention.JQUERY.convention);
+    System.out.printf("JsChecker 4: none %s, google %s, closure %s, jquery %s\n", Convention.NONE.convention.getClass().getName(), Convention.GOOGLE.convention.getClass().getName(), Convention.CLOSURE.convention.getClass().getName(), Convention.JQUERY.convention.getClass().getName());
     options.setCodingConvention(convention.convention);
     options.setSkipTranspilationAndCrash(true);
     options.setChecksOnly(true);

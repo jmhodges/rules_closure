@@ -52,6 +52,8 @@ def _impl(ctx):
       "--convention", ctx.attr.convention,
       "--language", _determine_check_language(ctx.attr.language),
   ]
+  print("closure_js_library ctx.outputs.providied.path", ctx.outputs.provided.path)
+  print("closure_js_library convention", ctx.attr.convention)
   proto_descriptor_sets = []
   if ctx.attr.proto_descriptor_set:
     proto_descriptor_sets += [ctx.attr.proto_descriptor_set]
