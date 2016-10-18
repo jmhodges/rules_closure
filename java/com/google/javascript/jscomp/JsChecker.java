@@ -197,6 +197,8 @@ public final class JsChecker {
     Compiler compiler = new Compiler();
     CompilerOptions options = new CompilerOptions();
     options.setLanguage(language);
+    System.out.println(convention);
+    System.out.println(convention.convention);
     options.setCodingConvention(convention.convention);
     options.setSkipTranspilationAndCrash(true);
     options.setChecksOnly(true);
